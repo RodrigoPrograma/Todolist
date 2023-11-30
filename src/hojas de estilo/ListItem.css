@@ -1,0 +1,28 @@
+.listItem{
+    display:flex;
+  }
+
+  #Item{
+    display:flex;
+    margin: 5px 0; 
+    align-items: center; 
+  }
+
+  .container-done{
+    width: 15px;
+    display: block;
+    height: 15px;
+    margin-right: 6px;
+    border: 2px solid green;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+
+  .text-decoration-line{
+    text-decoration: line-through;
+  }
+
+  .container-done.active{
+    background-color: green;
+    text-decoration: line-through;
+  }
