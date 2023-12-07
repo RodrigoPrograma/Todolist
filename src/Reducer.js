@@ -6,7 +6,6 @@ export const ListReducer = (initialState, action) => {
     switch (action.type) {
         case "Add Task":
             return [...initialState, action.payload]
-            console.log(action.payload)
         
             case "Delete Task":
             return initialState.filter(task => task.id !== action.payload)
