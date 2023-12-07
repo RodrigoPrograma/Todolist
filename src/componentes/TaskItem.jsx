@@ -1,5 +1,3 @@
-import react from "react"
-import form from "./TaskForm"
 import { TaskUpdate } from "./TaskUpdate";
 import { FaTrash } from 'react-icons/fa';
 import "../hojas de estilo/ListItem.css"
