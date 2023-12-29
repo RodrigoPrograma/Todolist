@@ -18,12 +18,14 @@ const {
   return (
     <>
     <div className="Lista-de-tareas">
+      <div className="headContainer">
       <h1 className="taskHeader"> LISTA DE TAREAS </h1>
+      </div>
       <div className="taskCounter">
         <div className="taskcount-container">  
         <h3>Hay {taskCount} tareas</h3>
         </div>
-        <h3>Actualmente {pendingTaskCount} tareas estan pendientes</h3>
+        <h3 className='pendingTasks'>Actualmente {pendingTaskCount} tareas estan pendientes</h3>
       </div>
 
       < Taskform

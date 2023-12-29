@@ -4,8 +4,15 @@
 }
 #root{
   border: 2px solid rgb(199, 196, 196);
-  margin: 6rem;
+  margin: 1rem;
   border-radius: 50px;
+  
+  background: linear-gradient(#41a5cc,#41a5aa);
+}
+
+.headContainer{
+  display: flex;
+  justify-content: center;
 }
 
 .Lista-de-tareas, .contenedor{
@@ -16,13 +23,25 @@
   margin-top: 50px; 
   padding: 50px 0;
 }
+.taskForm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
  .taskCounter{
   margin-bottom: 10px;
  }
 .taskHeader{
   margin-bottom: 5px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Diphylleia', serif;
 }
+
+.pendingTasks{
+margin-bottom: 15px;
+}
+
 .taskcount-container{
   display: flex;
   justify-content: center;
@@ -40,12 +59,17 @@
   background-color: rgb(7, 77, 77);
 }
 
+.buttonContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .btn-delete, .btn-edit{
   margin: 0 15px ;
   padding: 2px 20px;
   border-radius: 45%;
-  border: 0;
+  border: 1px solid #000;
   color:white;
   cursor: pointer;
 }
@@ -60,7 +84,43 @@
   background-color: #41a5cc;
 }
 
-
 .list{
   list-style: none;
+  display: flex;
+}
+
+@media (max-width:760px) {
+  .pendingTasks{
+    display: flex;
+    padding: 0 55px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .taskHeader{
+    font-size: 1;
+  }
+
+  .list{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .btn-edit{
+    background-color: #2ea1ce;
+  }
+
+  .btn-edit, .btn-delete{
+    margin:0 5px !important;
+  }
+  
+}
+
+@media (min-width:760px) {
+  .inputUpdate{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
 }

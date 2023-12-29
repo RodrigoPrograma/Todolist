@@ -24,7 +24,7 @@ export const Taskform = ({handleNewTask}) => {
     
     
     
-    <form onSubmit={onFormSubmit}>
+    <form className="taskForm" onSubmit={onFormSubmit}>
       <input 
       type="text"
       className="inputAdd"

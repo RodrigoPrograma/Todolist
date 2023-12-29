@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { FaEdit } from 'react-icons/fa'
+
 import { UsarForm } from '../hooks/UsarForm';
 
 
@@ -27,6 +27,7 @@ export const TaskUpdate = ({ task, handleUpdateTask }) => {
   
   
   return (
+    <>
     <form onSubmit={onFormUpdate}>
       <input
         type="text"
@@ -41,8 +42,10 @@ export const TaskUpdate = ({ task, handleUpdateTask }) => {
         ref={focusInput}
         />
 
-      <button className="btn-edit" type="submit"> <FaEdit /> </button>
 
     </form>
+      
+
+    </>
   )
 }
