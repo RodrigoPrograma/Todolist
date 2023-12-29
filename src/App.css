@@ -99,10 +99,6 @@ margin-bottom: 15px;
     text-align: center;
   }
 
-  .taskHeader{
-    font-size: 1;
-  }
-
   .list{
     justify-content: center;
     flex-direction: column;
