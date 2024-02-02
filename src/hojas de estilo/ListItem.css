@@ -1,8 +1,17 @@
 .listItem{
     display:flex;
   }
-
+  
+  .Task:hover{
+  cursor: grab;
+  }
+  .Task{
+    display: flex;
+    margin-bottom: 5px;
+    background-color: #22272B;
+  }
   #Item{
+    padding: 5px 15px;
     display:flex;
     margin: 5px 0; 
     align-items: center; 

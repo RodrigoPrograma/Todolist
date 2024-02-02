@@ -3,11 +3,10 @@
   padding: 0;
 }
 #root{
-  border: 2px solid rgb(199, 196, 196);
-  margin: 1rem;
-  border-radius: 50px;
-  
-  background: linear-gradient(#41a5cc,#41a5aa);
+  margin: 0 1rem;
+  border-radius: 0 0 50px 50px ;
+  color: #9e9d9d;
+  background-color: #30233f;
 }
 
 .headContainer{
@@ -20,7 +19,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px; 
   padding: 50px 0;
 }
 .taskForm{
@@ -28,14 +26,18 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.inputUpdate{
+  background-color: transparent;
+  border: none;
+  color: #B6C2CF;
+}
 
  .taskCounter{
   margin-bottom: 10px;
  }
 .taskHeader{
   margin-bottom: 5px;
-  font-family: 'Diphylleia', serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .pendingTasks{
@@ -67,27 +69,29 @@ margin-bottom: 15px;
 
 .btn-delete, .btn-edit{
   margin: 0 15px ;
-  padding: 2px 20px;
-  border-radius: 45%;
-  border: 1px solid #000;
+  padding: 5px 5px;
+  border-radius: 50%;
+  border: none;
   color:white;
   cursor: pointer;
 }
 .btn-delete{
-  background-color: red;
+  background-color: transparent;
 }
 .btn-delete:hover{
   background-color: rgb(122, 2, 2);
 }
 
 .btn-edit{
-  background-color: #41a5cc;
+  background-color: transparent;
 }
 
 .list{
   list-style: none;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
+  background-color: #19191a;
 }
 
 @media (max-width:760px) {
@@ -103,9 +107,7 @@ margin-bottom: 15px;
   .list{
     justify-content: center;
   }
-  .btn-edit{
-    background-color: #2ea1ce;
-  }
+  
 
   .btn-edit, .btn-delete{
     margin:0 5px !important;

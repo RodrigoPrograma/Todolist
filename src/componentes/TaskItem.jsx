@@ -1,7 +1,6 @@
 import { TaskUpdate } from "./TaskUpdate";
 import { FaTrash } from 'react-icons/fa';
 import "../hojas de estilo/ListItem.css"
-import { FaEdit } from 'react-icons/fa'
 
 export const TaskItem = ({
   task,
@@ -11,7 +10,8 @@ export const TaskItem = ({
 }) => {
   return (
     <>
-      <li classname="listItem" id="Item">
+    <div draggable="true" className="Task">
+      <li classname="listItem" id="Item"  >
 
         <span onClick={() => handleCompleteTask(task.id)}>
           <label className={`container-done ${task.done ? 'active' : ''}`}></label>
@@ -25,8 +25,7 @@ export const TaskItem = ({
           onClick={() => handleDeleteTask(task.id)}>
           <FaTrash />
         </button>
-
-        <button className="btn-edit" type="submit"> <FaEdit /> </button>
+      </div>
       </div>
     </>
   );

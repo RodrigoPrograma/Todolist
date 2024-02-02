@@ -1,51 +1,48 @@
-import React, { useRef, useState } from 'react'
-
+import React, { useRef, useState } from 'react';
 import { UsarForm } from '../hooks/UsarForm';
-
 
 export const TaskUpdate = ({ task, handleUpdateTask }) => {
   const { updateDescription, onInputChange } = UsarForm({
     updateDescription: task.description,
-  }); 
+  });
 
-  const [disabled, setDisabled] = useState(true)
-  const focusInput = useRef()
-  
-  const onFormUpdate = e => {
+  const [disabled, setDisabled] = useState(true);
+  const focusInput = useRef();
+
+  const onFormUpdate = (e) => {
     e.preventDefault();
-    
-    const id = task.id;
-    const description = task.description;
 
-    handleUpdateTask(id, description)
+    if (!disabled) {
+      const id = task.id;
+      const updatedDescription = updateDescription;
 
-    setDisabled(!disabled)
+      // Llama a la función de actualización solo si el input no está deshabilitado
+      handleUpdateTask(id, updatedDescription);
+    }
 
-    focusInput.current.focus()
+    // Invierte el estado disabled
+    setDisabled(!disabled);
 
+    // Enfoca el input después de la actualización
+    focusInput.current.focus();
   };
-  
-  
+
   return (
     <>
-    <form onSubmit={onFormUpdate}>
-      <input
-        type="text"
-        className={`inputUpdate ${task.done ? 'text-decoration-line' : ''
-      }`}
-        name='updateDescription'
-        id="newtask" 
-        value={updateDescription}
-        onChange={onInputChange}
-        placeholder="Que hay que hacer?" 
-        readOnly= {disabled}
-        ref={focusInput}
+      <form onSubmit={onFormUpdate}>
+        <input
+          type="text"
+          className={`inputUpdate ${task.done ? 'text-decoration-line' : ''}`}
+          name="updateDescription"
+          id="newtask"
+          value={updateDescription}
+          onChange={onInputChange}
+          placeholder="¿Qué hay que hacer?"
+          readOnly={disabled}
+          ref={focusInput}
         />
-
-
-    </form>
-      
-
+        <button type="submit" className="btn-edit">{disabled ? 'Editar' : 'Listo'}   </button>
+      </form>
     </>
-  )
-}
+  );
+};
