@@ -8,7 +8,9 @@
   color: #9e9d9d;
   background-color: #30233f;
 }
-
+ .taskForm{
+  display: flex;
+ }
 .headContainer{
   display: flex;
   justify-content: center;
@@ -30,6 +32,7 @@
   background-color: transparent;
   border: none;
   color: #B6C2CF;
+  width: 200px;
 }
 
  .taskCounter{
@@ -112,13 +115,9 @@ margin-bottom: 15px;
   .btn-edit, .btn-delete{
     margin:0 5px !important;
   }
+
   
-}
-
-@media (min-width:760px) {
-  .inputUpdate{
-    font-size: 20px;
-    font-weight: bold;
+  #root{
+    margin: 0;
   }
-
 }

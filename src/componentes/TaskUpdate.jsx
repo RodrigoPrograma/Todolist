@@ -29,7 +29,7 @@ export const TaskUpdate = ({ task, handleUpdateTask }) => {
 
   return (
     <>
-      <form onSubmit={onFormUpdate}>
+      <form onSubmit={onFormUpdate} className='TaskForm'>
         <input
           type="text"
           className={`inputUpdate ${task.done ? 'text-decoration-line' : ''}`}
