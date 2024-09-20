@@ -1,23 +1,26 @@
-.listItem{
-    display:flex;
-  }
-  
-  .Task:hover{
-  cursor: grab;
-  }
-  .Task{
+.listItem {
     display: flex;
+}
+
+.Task:hover {
+    cursor: grab;
+}
+
+.Task {
+    display: flex;
+    padding: .3rem;
     margin-bottom: 5px;
     background-color: #22272B;
-  }
-  #Item{
-    padding: 5px 15px;
-    display:flex;
-    margin: 5px 0; 
-    align-items: center; 
-  }
+}
 
-  .container-done{
+#Item {
+    padding: 15px 7px;
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.container-done {
     width: 15px;
     display: block;
     height: 15px;
@@ -25,14 +28,13 @@
     border: 2px solid green;
     border-radius: 40px;
     cursor: pointer;
-  }
+}
 
-  .text-decoration-line{
+.text-decoration-line {
     text-decoration: line-through;
-  }
+}
 
-  .container-done.active{
+.container-done.active {
     background-color: green;
     text-decoration: line-through;
-  }
-
+}

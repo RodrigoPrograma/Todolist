@@ -3,22 +3,18 @@ import { ListReducer } from "../Reducer"
 
 export const Usarlista = () => {
     const InitialState = [];
-
     const init = () => {
-        return JSON.parse(localStorage.getItem("tasks")) || []
-    };
-
+        return JSON.parse(localStorage.getItem("tasks")) || []};
     const [tasks, dispatch] = useReducer(ListReducer, InitialState, init);
-
     const taskCount = tasks.length
     const pendingTaskCount = tasks.filter(task => !task.done).length
 
-    useEffect(() =>{
+    useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks))
-    }, [tasks]);
+        }, [tasks]
+    );
 
     const handleNewTask = task => {
-        
         const action = {
             type: "Add Task",
             payload: task,
@@ -32,7 +28,6 @@ export const Usarlista = () => {
         };
         dispatch(action)
     };
-
     const handleCompleteTask = id => {
         const action = {
             type: "Complete List",
@@ -40,7 +35,6 @@ export const Usarlista = () => {
         };
         dispatch(action)
     };
-
     const handleUpdateTask = (id, description) => {
         const action = {
             type: "Update list",
